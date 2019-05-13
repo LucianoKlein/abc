@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./loading.css">
+  <link rel="stylesheet" href="./forum.css">
+  <script src="//at.alicdn.com/t/font_533111_l73guh7ctbvxtj4i.js"></script>
+
+  <style type="text/css">
+    .loading.active {
+      display: flex;
+    }
+
+    .loading {
+      display: none;
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .loading::before,
+    .loading::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #555;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      animation: s 1.5s linear infinite;
+    }
+
+    .loading::after {
+      content: '';
+      animation-delay: 0.75s;
+    }
+
+    @keyframes s {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+      100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+      }
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    .site-welcome {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #eee;
+      z-index: 2;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .site-welcome.active {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="siteWelcome" class="site-welcome active">
+    <div id="loading" class="loading active"></div>
+  </div>
+  <div class="loading"></div>
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left;">
+        <span class="rs">ReSuMe</span>
+        <span class="card">Card</span>
+      </a>
+      <nav class="menu" style="float: right;">
+        <ul class="clearfix">
+          <li>
+            <a href="#siteAbout">About</a>
+          </li>
+          <li>
+            <a href="#siteSkills">Skills</a>
+          </li>
+          <li>
+            <a href="#siteWorks">My Work</a>
+            <ul class="submenu">
+              <li>Work1</li>
+              <li>Work2</li>
+              <li>Work3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+            <ul class="submenu">
+              <li>Blog1</li>
+              <li>Blog2</li>
+              <li>Blog3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Calender</a>
+          </li>
+          <li>
+            <a href="#">Contact Me</a>
+          </li>
+          <li>
+            <a href="#">Others</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+    <div data-x id="siteAbout" class="userCard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar.jpg" class="avatar" alt="头像">
+        </div>
+        <div class="text">
+          <div id="upper" class="clearfix">
+            <div class="upperleft">
+              <span class="welcome">HELLO
+                <span class="triangle"></span>
+              </span>
+              <h1>
+                <font>XIN HE</font>
+              </h1>
+              <p>Front End Engineer</p>
+            </div>
+            <div class="upperright">
+              <div class="taichi"></div>
+            </div>
+          </div>
+          <hr>
+          <dl>
+            <dt>Age</dt>
+            <dd>24</dd>
+            <dt>Location</dt>
+            <dd>San Jose</dd>
+            <dt>Email</dt>
+            <dd>qpwoei8384@126.com</dd>
+            <dt>Phone Number</dt>
+            <dd>18261954316</dd>
+          </dl>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="#siteAbout">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github-io"></use>
+          </svg>
+        </a>
+        <a href="#siteSkills">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-logo_csdn"></use>
+          </svg>
+        </a>
+        <a href="#siteWorks">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+    <p class="downloadResume-wrapper">
+      <a class="downloadResume" href="./resume.pdf" target="_blank" download>Download PDF</a>
+    </p>
+  </main>
+  <div class="videoBlock" >
+    <iframe class="insideBlock"  src="https://www.youtube.com/embed/5W8j6wOvxuo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <!-- data-x是会动的标签 -->
+  <section data-x id="siteSkills" class="skills">
+    <h2>Skills</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>
+          HTML 5 &amp; CSS 3
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          JavaScript
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          jQuery
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 45%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Vue.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 65%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          React.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 45%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Node.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section data-x id="siteWorks" class="portfolio">
+    <h2>My Work</h2>
+    <nav>
+      <ol class="clearfix">
+        <li id="portfolio1">All</li>
+        <li id="portfolio2">Framework</li>
+        <li id="portfolio3">JS&amp;CSS</li>
+      </ol>
+      <div id="portfolioBar" class="bar state-1">
+        <div class="bar-inner"></div>
+      </div>
+    </nav>
+    <script>
+      portfolio1.onclick = function () {
+        portfolioBar.className = 'bar state-1'
+      }
+
+      portfolio2.onclick = function () {
+        portfolioBar.className = 'bar state-2'
+      }
+
+      portfolio3.onclick = function () {
+        portfolioBar.className = 'bar state-3'
+      }
+    </script>
+    <div class="works" style="height: 597px">
+      <div class="big" style="top: 0; left: 0;">
+        <img src="./img/1.jpg" alt="作品1">
+      </div>
+      <div class="small" style="top: 0; left: 645px;">
+        <img src="./img/2.jpg" alt="作品2">
+      </div>
+      <div class="small" style="top: 312px; left: 645px;">
+        <img src="./img/3.jpg" alt="作品3">
+      </div>
+    </div>
+  </section>
+
+  <section class="forum">
+    <div class="forum-top">
+      <div class="how-many-discuss">评论区</div>
+      <div class="time-order">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-swap"></use>
+        </svg>
+        切换为时间排序
+      </div>
+    </div>
+    <div id="forumMessageList" class="forum-discuss-list">
+      <div class="commentItem">
+        <div class="CommentItem-meta">
+          <div class="avatar-and-username">
+            <div class="CommentItem-avatar">
+              <img src="./img/avatar-comment.jpg" alt="">
+            </div>
+            <div class="UserLink">
+              <a class="comment-username" href="">耿直的博美君</a>
+            </div>
+          </div>
+          <div class="Comment-time">37分钟前</div>
+        </div>
+        <div class="CommentItem-content">哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮</div>
+        <div class="CommentItem-footer-wrapper">
+          <div class="CommentItem-footer">
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;">
+                <g>
+                  <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
+                </g>
+              </svg>赞
+            </div>
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 22 16" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;">
+                <g>
+                  <path d="M21.96 13.22c-1.687-3.552-5.13-8.062-11.637-8.65-.54-.053-1.376-.436-1.376-1.56V.677c0-.52-.635-.915-1.116-.52L.47 6.67C.18 6.947 0 7.334 0 7.763c0 .376.14.722.37.987 0 0 6.99 6.818 7.442 7.114.453.295 1.136.124 1.135-.5V13c.027-.814.703-1.466 1.532-1.466 1.185-.14 7.596-.077 10.33 2.396 0 0 .395.257.535.257.892 0 .614-.967.614-.967z"></path>
+                </g>
+              </svg>回复
+            </div>
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" width="13" height="16" aria-hidden="true" style="transform: rotate(180deg); height: 16px; width: 13px;">
+                <g>
+                  <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
+                </g>
+              </svg>踩
+            </div>
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 18 20" width="11" height="16" aria-hidden="true" style="height: 16px; width: 11px;">
+                <g>
+                  <path d="M16.947 1.13c-.633.135-3.927.638-5.697.384-3.133-.45-4.776-2.54-9.95-.888C.305 1.04.025 1.664.025 2.646L0 18.807c0 .3.1.54.304.718.195.202.438.304.73.304.275 0 .52-.102.73-.304.202-.18.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V1.964c0-.6-.42-.972-1.053-.835z"></path>
+                </g>
+              </svg>举报
+            </div>
+          </div>
+          <div class="emailUser">
+            qpwoei8384@126.com
+          </div>
+        </div>
+        <div class="horizontal-line"></div>
+      </div>
+
+
+      <div class="commentItem">
+        <div class="CommentItem-meta">
+          <div class="avatar-and-username">
+            <div class="CommentItem-avatar">
+              <img src="./img/avatar-comment.jpg" alt="">
+            </div>
+            <div class="UserLink">
+              <a class="comment-username" href="">耿直的博美君</a>
+            </div>
+          </div>
+          <div class="Comment-time">37分钟前</div>
+        </div>
+        <div class="CommentItem-content">哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮</div>
+        <div class="CommentItem-footer-wrapper">
+          <div class="CommentItem-footer">
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;">
+                <g>
+                  <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
+                </g>
+              </svg>赞
+            </div>
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 22 16" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;">
+                <g>
+                  <path d="M21.96 13.22c-1.687-3.552-5.13-8.062-11.637-8.65-.54-.053-1.376-.436-1.376-1.56V.677c0-.52-.635-.915-1.116-.52L.47 6.67C.18 6.947 0 7.334 0 7.763c0 .376.14.722.37.987 0 0 6.99 6.818 7.442 7.114.453.295 1.136.124 1.135-.5V13c.027-.814.703-1.466 1.532-1.466 1.185-.14 7.596-.077 10.33 2.396 0 0 .395.257.535.257.892 0 .614-.967.614-.967z"></path>
+                </g>
+              </svg>回复
+            </div>
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" width="13" height="16" aria-hidden="true" style="transform: rotate(180deg); height: 16px; width: 13px;">
+                <g>
+                  <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
+                </g>
+              </svg>踩
+            </div>
+            <div class="Comment-footer-button">
+              <svg viewBox="0 0 18 20" width="11" height="16" aria-hidden="true" style="height: 16px; width: 11px;">
+                <g>
+                  <path d="M16.947 1.13c-.633.135-3.927.638-5.697.384-3.133-.45-4.776-2.54-9.95-.888C.305 1.04.025 1.664.025 2.646L0 18.807c0 .3.1.54.304.718.195.202.438.304.73.304.275 0 .52-.102.73-.304.202-.18.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V1.964c0-.6-.42-.972-1.053-.835z"></path>
+                </g>
+              </svg>举报
+            </div>
+          </div>
+        </div>
+        <div class="horizontal-line"></div>
+      </div>
+
+    </div>
+
+    <div class="Comment-footer">
+      <input id="messageInputBox" class="commentEditor-input" placeholder="写下你的评论..." onfocus="this.placeholder=''" onblur="this.placeholder='写下你的评论...'">
+      <button id="messageSubmitButton" class="CommentEditor-submit">评论</button>
+    </div>
+  </section>
+
+  <div id="globalMask" class="globalMask">
+
+  </div>
+
+  <div id="dialog" class="dialog">
+    <div class="title">WARNING
+      <div class="close"></div>
+    </div>
+    <div class="dialogbody">
+      <div class="messageSec">
+        <span class="alertMessage">评论不可以为空</span>
+      </div>
+      <div class="buttonSec">
+        <div id="dialog-button" class="yes-button">好的</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dialogLogin" class="dialogLogin">
+    <div class="title">请输入你的名字
+      <div class="close"></div>
+    </div>
+    <div class="dialogbody">
+      <div class="messageSec">
+        <div class="nameSec">
+          <label class="nameLabel" for="userName">姓名</label>
+          <input id="userName" type="text">
+        </div>
+        <div class="emailSec">
+          <label class="emailLabel" for="userEmail">邮箱</label>
+          <input id="userEmail" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="buttonSec">
+      <div id="dialog-button" class="yes-button">确认</div>
+    </div>
+  </div>
+
+  <div id="commentItemTemplate" class="commentItemTemplate">
+    <div class="CommentItem-meta">
+      <div class="avatar-and-username">
+        <div class="CommentItem-avatar">
+          <img src="./img/avatar-comment.jpg" alt="">
+        </div>
+        <div class="UserLink">
+          <a class="comment-username" href="">耿直的博美君</a>
+        </div>
+      </div>
+      <div class="Comment-time">37分钟前</div>
+    </div>
+    <div class="CommentItem-content">哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮哇o(￣▽￣)ｄ 漂亮</div>
+    <div class="CommentItem-footer-wrapper">
+      <div class="CommentItem-footer">
+        <div class="Comment-footer-button  displayYes">
+          <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;">
+            <g>
+              <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
+            </g>
+          </svg>赞
+        </div>
+        <div class="Comment-footer-button">
+          <svg viewBox="0 0 22 16" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;">
+            <g>
+              <path d="M21.96 13.22c-1.687-3.552-5.13-8.062-11.637-8.65-.54-.053-1.376-.436-1.376-1.56V.677c0-.52-.635-.915-1.116-.52L.47 6.67C.18 6.947 0 7.334 0 7.763c0 .376.14.722.37.987 0 0 6.99 6.818 7.442 7.114.453.295 1.136.124 1.135-.5V13c.027-.814.703-1.466 1.532-1.466 1.185-.14 7.596-.077 10.33 2.396 0 0 .395.257.535.257.892 0 .614-.967.614-.967z"></path>
+            </g>
+          </svg>回复
+        </div>
+        <div class="Comment-footer-button">
+          <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" width="13" height="16" aria-hidden="true" style="transform: rotate(180deg); height: 16px; width: 13px;">
+            <g>
+              <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
+            </g>
+          </svg>踩
+        </div>
+        <div class="Comment-footer-button">
+          <svg viewBox="0 0 18 20" width="11" height="16" aria-hidden="true" style="height: 16px; width: 11px;">
+            <g>
+              <path d="M16.947 1.13c-.633.135-3.927.638-5.697.384-3.133-.45-4.776-2.54-9.95-.888C.305 1.04.025 1.664.025 2.646L0 18.807c0 .3.1.54.304.718.195.202.438.304.73.304.275 0 .52-.102.73-.304.202-.18.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V1.964c0-.6-.42-.972-1.053-.835z"></path>
+            </g>
+          </svg>举报
+        </div>
+      </div>
+      <div class="emailUser">
+        qpwoei8384@126.com
+      </div>
+    </div>
+    <div class="horizontal-line"></div>
+  </div>
+  <script src="./script/av-min.js"></script>
+  <script src="./script/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+  <script>
+    var delay = function () {
+      siteWelcome.classList.remove('active');
+      loading.classList.remove('active');
+    }
+
+    let specialTags = document.querySelectorAll('[data-x]');
+
+    for (let i = 0; i < specialTags.length; i++) {
+      specialTags[i].classList.add('offset');
+    }
+    let minIndex = 0;
+    let min = specialTags[0];
+    setTimeout('delay()', 3000);
+
+    window.onscroll = function (xxx) {
+      window.scrollY > 0 ? topNavBar.classList.add('sticky') : topNavBar.classList.remove('sticky');
+
+      for (let i = 0; i < specialTags.length; i++) {
+        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+          minIndex = i;
+        }
+      }
+
+      //minIndex 就是离屏幕窗口顶部最近的元素的索引
+      specialTags[minIndex].classList.remove('offset');
+      let id = specialTags[minIndex].id;
+      let a = document.querySelector('a[href="#' + id + '"]');
+      let li = a.parentNode;
+
+      let brothersAndMe = li.parentNode.children;
+      for (let i = 0; i < brothersAndMe.length; i++) {
+        brothersAndMe[i].classList.remove('highlight');
+      }
+      li.classList.add('highlight');
+    }
+
+    let liTags = document.querySelectorAll('nav.menu > ul > li');
+
+    // Setup the animation loop.
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+
+    requestAnimationFrame(animate);
+    //
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (x) {
+        x.currentTarget.classList.add('active');
+      }
+      liTags[i].onmouseleave = function (x) {
+        x.currentTarget.classList.remove('active');
+      }
+    }
+
+    //得到顶部的这几个导航栏的tag
+    let aTags = document.querySelectorAll('nav.menu > ul > li > a');
+
+    //给每一个导航栏都加上点击事件
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (x) {
+        x.preventDefault();
+        let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
+        let currentTop = window.scrollY; //在点击的一瞬间点的
+        let targetTop = top - 80;
+        var coords = {
+          y: currentTop
+        }; // Start at (0, 0)
+        let s = targetTop - currentTop;
+        let t = Math.abs((s / 100) * 300);
+        if (t > 500) {
+          t = 500;
+        }
+
+        var tween = new TWEEN.Tween(coords)
+          .to({
+            y: targetTop
+          }, t)
+          .easing(TWEEN.Easing.Quadratic.InOut)
+          .onUpdate(function () {
+            window.scrollTo(0, coords.y);
+          })
+          .start();
+      }
+    }
+  </script>
+  <script src="./script/message.js"></script>
+</body>
+
+</html>
